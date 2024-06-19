@@ -1,11 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends 'registro_r/base.html' %}
+{% load static %}
+{% block contenido %}
+<div class="jumbotron text-center">
+    <h1 class="display-4">Bienvenidos a Fundación Apoyo</h1>
+    <p class="lead">Gestión administrativa eficiente para el cuidado de nuestros mayores</p>
+</div>
+
+<div class="container">
+    <h2 class="section-title text-center">Panel Administrativo</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <img src="{% static 'registro_r/img/pngwing.com.png' %}" class="img-fluid mb-3" alt="Residentes">
+            <h4>Gestión de Residentes</h4>
+            <p>Administra la información y el bienestar de los residentes.</p>
+            <a class="btn btn-primary" href="{% url 'registror'%}">Gestionar Residentes</a>
+        </div>
+    </div>
+</div>
+{% endblock%}

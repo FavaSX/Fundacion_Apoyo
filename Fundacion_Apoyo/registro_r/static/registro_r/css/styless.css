@@ -1,2 +1,34 @@
 body {
-    background-color: #c9f1fd;}
+    background-color: #c9f1fd;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+.jumbotron {
+    background: url('/registro_r/static/registro_r/img/imagen_administrativa.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+}
+
+.jumbotron h1 {
+    text-shadow: 2px 2px 4px #000;
+}
+
+.section-title {
+    margin: 2rem 0;
+}
