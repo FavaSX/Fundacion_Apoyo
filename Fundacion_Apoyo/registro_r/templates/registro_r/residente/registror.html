@@ -1,8 +1,9 @@
 {%extends 'registro_r/base.html'%}
+
 {% block contenido %}
 <div class="container mt-4">
     <h2 class="text-center mb-4">Registro de residentes</h2>
-    
+
     <div class="table-responsive">
         <table class="table table-bordered bg-white">
             <thead class="thead-light">
@@ -14,6 +15,7 @@
                     <th>Medicamentos</th>
                     <th>Situación de salud</th>
                     <th>Cuidados especiales</th>
+                    <th>Opciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,10 +28,18 @@
                     <td>{{p.medicamentos}}</td>
                     <td>{{p.situacion_salud}}</td>
                     <td>{{p.cuidados_especiales}}</td>
+                    <td>
+                        <a href="{% url 'modificar_residente' p.rut %}" class="btn btn-info btn-sm">modificar</a>
+                        <a href="{% url 'eliminar_residente' p.rut %}"class="btn btn-danger btn-sm">eliminar</a>
+                    </td>
                 </tr>
                 {% endfor %}
+                
             </tbody>
+           
         </table>
+        <a href="{% url 'agregar_residente' %}" class="btn btn-primary">Registrar</a>
     </div>
 </div>
+
 {%endblock%}
